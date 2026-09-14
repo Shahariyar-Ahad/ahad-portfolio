@@ -1,0 +1,239 @@
+[
+  {
+    "id": 1,
+    "title": "Blood-Sphere",
+    "slug": "blood-sphere",
+    "type": "Full-Stack Web Application",
+    "description": "A community-driven blood donation and emergency support platform where users can register as donors, request blood during emergencies, and provide voluntary funding.",
+    "features": [
+      "Blood donor registration",
+      "Emergency blood request",
+      "Voluntary funding",
+      "Secure payment system",
+      "Community-driven platform",
+      "Free for everyone"
+    ],
+    "techStack": [
+      "React",
+      "JavaScript",
+      "Firebase",
+      "MongoDB"
+    ],
+    "image": "/assets/blood.png",
+    "links": {
+      "live": "https://bd-blood-donar-2025.web.app/",
+      "github": "https://github.com/Shahariyar-Ahad/bloodsphere-fontend",
+      "server": "https://blood-donor-server-two.vercel.app/",
+      "serverGithub": "https://github.com/Shahariyar-Ahad/blood-server"
+    },
+    "status": "Completed"
+  },
+  {
+    "id": 2,
+    "title": "JAS Properties",
+    "slug": "jas-properties",
+    "type": "Web Design & Development",
+    "duration": "January 2026 - January 2026",
+    "description": "A modern real estate website that showcases running, upcoming, and sold projects along with interior design and Thai aluminum services.",
+    "features": [
+      "Real estate project showcase",
+      "Running projects",
+      "Upcoming projects",
+      "Sold projects",
+      "Interior design services",
+      "Thai aluminum services",
+      "Property filtering",
+      "Location-based filtering",
+      "Category filtering",
+      "Price filtering",
+      "Smart search",
+      "Detailed project viewing"
+    ],
+    "techStack": [
+      "Next.js",
+      "MongoDB"
+    ],
+    "image": "/assets/jas.png",
+    "links": {
+      "live": "https://jas-properties.vercel.app/",
+      "github": "https://github.com/Shahariyar-Ahad/jasProperties-"
+    },
+    "status": "Completed"
+  },
+  {
+    "id": 3,
+    "title": "Zap-Shift",
+    "slug": "zap-shift",
+    "type": "Full-Stack Courier & Parcel Delivery Platform",
+    "description": "A full-stack courier and parcel delivery management platform where users can book parcels, make payments, track deliveries, and manage their delivery requests. The platform includes role-based dashboards for users, admins, and riders.",
+    "features": [
+      "User registration and login",
+      "Parcel booking and ordering",
+      "Automated delivery pricing",
+      "Parcel payment system",
+      "Real-time parcel tracking",
+      "Parcel status management",
+      "Role-based access control",
+      "User dashboard",
+      "Admin dashboard",
+      "Rider dashboard",
+      "Admin can assign riders",
+      "Admin can manage routing",
+      "Warehouse management",
+      "Operations monitoring",
+      "Rider parcel collection",
+      "Rider parcel delivery",
+      "Delivery status updates",
+      "OTP-based delivery confirmation",
+      "Warehouse handoff",
+      "Customer reviews and feedback",
+      "Nationwide coverage across 64 districts",
+      "Transparent rider commission system"
+    ],
+    "roles": {
+      "user": {
+        "responsibilities": [
+          "Book parcels",
+          "Pay delivery charges",
+          "Track parcel status",
+          "Review delivery service"
+        ],
+        "benefits": [
+          "Real-time tracking",
+          "Feedback opportunity"
+        ]
+      },
+      "admin": {
+        "responsibilities": [
+          "Assign riders",
+          "Manage routing",
+          "Manage warehouses",
+          "Monitor delivery operations"
+        ],
+        "benefits": [
+          "System control",
+          "Operational oversight"
+        ]
+      },
+      "rider": {
+        "responsibilities": [
+          "Collect parcels",
+          "Deliver parcels",
+          "Update delivery status",
+          "OTP confirmation",
+          "Warehouse handoff"
+        ],
+        "commission": {
+          "sameCity": "80% per delivery",
+          "outsideCity": "60% per delivery"
+        }
+      }
+    },
+    "pricing": {
+      "document": {
+        "weight": "Any",
+        "withinCity": "৳60",
+        "outsideCityOrDistrict": "৳80"
+      },
+      "nonDocument": {
+        "upTo3kg": {
+          "weight": "Up to 3kg",
+          "withinCity": "৳110",
+          "outsideCityOrDistrict": "৳150"
+        },
+        "above3kg": {
+          "weight": ">3kg",
+          "withinCity": "+৳40/kg",
+          "outsideCityOrDistrict": "+৳40/kg + ৳40 extra"
+        }
+      }
+    },
+    "keyFeatures": [
+      "Automated Pricing & Tracking",
+      "Role-based Access & Workflow",
+      "OTP-based Secure Delivery",
+      "Nationwide Coverage",
+      "Transparent Commission Structure"
+    ],
+    "techStack": [
+      "React",
+      "JavaScript",
+      "Firebase",
+      "MongoDB"
+    ],
+    "image": "/assets/zap.png",
+    "links": {
+      "live": "upcoming",
+      "github": "upcoming"
+    },
+    "status": "Upcoming"
+  },
+  {
+    "id": 4,
+    "title": "Pet Paw",
+    "slug": "pet-paw",
+    "type": "Full-Stack Marketplace",
+    "description": "A pet adoption and pet accessories marketplace where users can adopt pets, give pets for adoption, and buy or sell pet-related accessories.",
+    "features": [
+      "Pet adoption",
+      "Pet listing for adoption",
+      "Pet accessories marketplace",
+      "Buy and sell products",
+      "Person-to-person interaction",
+      "Free and open for everyone"
+    ],
+    "techStack": [
+      "React",
+      "JavaScript",
+      "Firebase",
+      "MongoDB"
+    ],
+    "image": "/assets/petpaw.png",
+    "links": {
+      "live": "https://petpaw-2025.web.app/",
+      "github": "https://github.com/Shahariyar-Ahad/my-pet-new-store",
+      "server": "https://petpaw-server.vercel.app/",
+      "serverGithub": "https://github.com/Shahariyar-Ahad/petpaw-server"
+    },
+    "status": "Completed"
+  },
+  {
+    "id": 5,
+    "title": "Electronic Voting Machine",
+    "slug": "electronic-voting-machine",
+    "type": "Digital Electronics Project",
+    "description": "A digital electronic voting machine designed and simulated in Proteus using TTL logic ICs. The system allows voters to cast votes for candidates and displays voting results using 7-segment displays.",
+    "features": [
+      "Candidate selection",
+      "Vote counting",
+      "Digital vote storage",
+      "7-segment vote display",
+      "Reset functionality",
+      "Logic-based voting system",
+      "Proteus circuit simulation"
+    ],
+    "components": [
+      "74LS00",
+      "74LS04",
+      "74LS08",
+      "74LS32",
+      "74LS74",
+      "74LS85",
+      "74LS47",
+      "74LS192",
+      "74LS266",
+      "5161AS 7-Segment Display",
+      "10nF Capacitor"
+    ],
+    "techStack": [
+      "Proteus",
+      "TTL Logic",
+      "Digital Electronics"
+    ],
+    "image": "/assets/evm.png",
+    "links": {
+      "github": ""
+    },
+    "status": "Completed"
+  }
+]
