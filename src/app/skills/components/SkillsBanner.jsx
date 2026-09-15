@@ -17,6 +17,10 @@ const SkillsBanner = () => {
         "Electronics",
         "Writing",
         "Responsive Design",
+        "Microsoft word",
+        "Electrical circuits",
+        "Bangla,English",
+        "Little bit spanish"
     ];
 
     return (

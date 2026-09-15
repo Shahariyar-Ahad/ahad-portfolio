@@ -600,189 +600,406 @@ const Navbar = () => {
 
                         {/* ================= MOBILE MUSIC ================= */}
 
-                        <li className="block">
+                       
+{/* ================= MOBILE MUSIC ================= */}
 
-                            <button
-                                onClick={(e) => {
-                                    e.preventDefault();
-                                    setMusicOpen(!musicOpen);
-                                }}
-                                className="
+
+{/* ================= MOBILE MUSIC ================= */}
+
+<li className="!block !w-full">
+
+    {/* ================= MUSIC HEADER ================= */}
+
+    <button
+        onClick={(e) => {
+            e.preventDefault();
+            setMusicOpen(!musicOpen);
+        }}
+        className="
+            !flex
+            !w-full
+            !items-center
+            !justify-between
+            rounded-xl
+            px-3
+            py-3
+            !text-[#F1EEE8]
+            transition
+            hover:bg-[#24211E]
+        "
+    >
+
+        <span className="flex items-center gap-2">
+
+            <span
+                className={
+                    isPlaying
+                        ? "animate-pulse text-lg text-[#A94738]"
+                        : "text-lg text-[#F1EEE8]"
+                }
+            >
+                ♪
+            </span>
+
+            <span className="text-sm">
+                Music
+            </span>
+
+        </span>
+
+        <span className="text-xs text-[#8E8982]">
+            {musicOpen ? "▲" : "▼"}
+        </span>
+
+    </button>
+
+
+    {/* ===================================================== */}
+    {/* ================= MUSIC CONTENT ===================== */}
+    {/* ===================================================== */}
+
+    {musicOpen && (
+
+        <div className="mt-2 !block !w-full">
+
+
+            {/* ================================================= */}
+            {/* ================= MUSIC PLAYER ================== */}
+            {/* ================================================= */}
+
+            <div
+                className="
+                    !block
+                    !w-full
+                    overflow-hidden
+                    rounded-xl
+                    border
+                    border-[#403A34]
+                    bg-[#181715]
+                "
+            >
+
+                {/* ================= NOW PLAYING ================= */}
+
+                <div className="border-b border-[#34312D] px-4 py-4">
+
+                    <p
+                        className="
+                            text-[10px]
+                            uppercase
+                            tracking-[2px]
+                            text-[#77716A]
+                        "
+                    >
+                        Now Playing
+                    </p>
+
+
+                    <div className="mt-2 flex items-center justify-between gap-3">
+
+                        {/* SONG INFO */}
+
+                        <div className="min-w-0 flex-1">
+
+                            <p className="truncate text-sm font-semibold text-[#F1EEE8]">
+                                {songs[currentSong].title}
+                            </p>
+
+                            <p className="mt-1 truncate text-xs text-[#8E8982]">
+                                {songs[currentSong].artist}
+                            </p>
+
+                        </div>
+
+
+                        {/* MUSIC ICON */}
+
+                        <div
+                            className="
+                                flex
+                                h-11
+                                w-11
+                                shrink-0
+                                items-center
+                                justify-center
+                                rounded-full
+                                bg-[#24211E]
+                            "
+                        >
+
+                            <span
+                                className={
+                                    isPlaying
+                                        ? "animate-spin text-xl text-[#A94738]"
+                                        : "text-xl text-[#F1EEE8]"
+                                }
+                            >
+                                ♪
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                {/* ================= CONTROLS ================= */}
+
+                <div className="px-4 py-5">
+
+                    <div className="flex items-center justify-center gap-7">
+
+                        {/* PREVIOUS */}
+
+                        <button
+                            onClick={previousSong}
+                            aria-label="Previous song"
+                            className="
+                                flex
+                                h-9
+                                w-9
+                                items-center
+                                justify-center
+                                rounded-full
+                                text-lg
+                                text-[#B8B2AA]
+                                transition
+                                hover:bg-[#24211E]
+                                hover:text-[#F1EEE8]
+                            "
+                        >
+                            ⏮
+                        </button>
+
+
+                        {/* PLAY / PAUSE */}
+
+                        <button
+                            onClick={togglePlay}
+                            aria-label={isPlaying ? "Pause" : "Play"}
+                            className="
+                                flex
+                                h-12
+                                w-12
+                                items-center
+                                justify-center
+                                rounded-full
+                                bg-[#F1EEE8]
+                                text-[#0D0D0D]
+                                transition
+                                hover:scale-105
+                                hover:bg-[#A94738]
+                                hover:text-white
+                            "
+                        >
+                            {isPlaying ? "Ⅱ" : "▶"}
+                        </button>
+
+
+                        {/* NEXT */}
+
+                        <button
+                            onClick={nextSong}
+                            aria-label="Next song"
+                            className="
+                                flex
+                                h-9
+                                w-9
+                                items-center
+                                justify-center
+                                rounded-full
+                                text-lg
+                                text-[#B8B2AA]
+                                transition
+                                hover:bg-[#24211E]
+                                hover:text-[#F1EEE8]
+                            "
+                        >
+                            ⏭
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            {/* ================================================= */}
+            {/* ================= PLAYLIST ====================== */}
+            {/* ================================================= */}
+
+            <div
+                className="
+                    !mt-2
+                    !block
+                    !w-full
+                    overflow-hidden
+                    rounded-xl
+                    border
+                    border-[#403A34]
+                    bg-[#181715]
+                "
+            >
+
+                {/* ================= PLAYLIST HEADER ================= */}
+
+                <div
+                    className="
+                        !block
+                        !w-full
+                        border-b
+                        border-[#34312D]
+                        px-4
+                        py-3
+                    "
+                >
+
+                    <p
+                        className="
+                            text-[10px]
+                            uppercase
+                            tracking-[2px]
+                            text-[#77716A]
+                        "
+                    >
+                        Playlist
+                    </p>
+
+                </div>
+
+
+                {/* ================= SONG LIST ================= */}
+
+                <div
+                    className="
+                        !block
+                        !w-full
+                        max-h-[250px]
+                        overflow-y-auto
+                    "
+                >
+
+                    {songs.map((song, index) => (
+
+                        <button
+                            key={index}
+                            onClick={() => changeSong(index)}
+                            className={`
+                                !flex
+                                !w-full
+                                !max-w-full
+                                !items-center
+                                gap-3
+                                px-4
+                                py-3
+                                text-left
+                                transition
+                                ${
+                                    currentSong === index
+                                        ? "bg-[#24211E] text-[#F1EEE8]"
+                                        : "text-[#8E8982] hover:bg-[#211F1C] hover:text-[#F1EEE8]"
+                                }
+                            `}
+                        >
+
+                            {/* ================= SONG NUMBER ================= */}
+
+                            <span
+                                className={`
                                     flex
-                                    w-full
+                                    w-6
+                                    shrink-0
                                     items-center
-                                    justify-between
-                                    rounded-lg
-                                    px-3
-                                    py-3
-                                    !text-[#F1EEE8]
-                                    hover:bg-[#24211E]
-                                "
+                                    justify-center
+                                    text-xs
+                                    ${
+                                        currentSong === index && isPlaying
+                                            ? "text-[#A94738]"
+                                            : "text-[#77716A]"
+                                    }
+                                `}
                             >
 
-                                <span className="flex items-center gap-2">
+                                {currentSong === index && isPlaying
+                                    ? "♫"
+                                    : `${index + 1}.`
+                                }
 
-                                    <span
-                                        className={
-                                            isPlaying
-                                                ? "animate-pulse text-lg text-[#A94738]"
-                                                : "text-lg text-[#F1EEE8]"
+                            </span>
+
+
+                            {/* ================= SONG INFO ================= */}
+
+                            <div className="min-w-0 flex-1">
+
+                                <p
+                                    className={`
+                                        truncate
+                                        text-sm
+                                        ${
+                                            currentSong === index
+                                                ? "font-medium text-[#F1EEE8]"
+                                                : ""
                                         }
-                                    >
-                                        ♪
-                                    </span>
-
-                                    <span>Music</span>
-
-                                </span>
-
-                                <span className="text-xs text-[#8E8982]">
-                                    {musicOpen ? "▲" : "▼"}
-                                </span>
-
-                            </button>
-
-                            {/* MOBILE MUSIC PLAYER */}
-
-                            {musicOpen && (
-                                <div
-                                    className="
-                                        mt-2
-                                        w-full
-                                        overflow-hidden
-                                        rounded-xl
-                                        border
-                                        border-[#403A34]
-                                        bg-[#24211E]
-                                    "
+                                    `}
                                 >
+                                    {song.title}
+                                </p>
 
-                                    {/* Current Song */}
 
-                                    <div className="border-b border-[#403A34] px-4 py-4">
+                                <p className="mt-0.5 truncate text-[11px] text-[#66615B]">
+                                    {song.artist}
+                                </p>
 
-                                        <p className="text-[10px] uppercase tracking-[2px] text-[#77716A]">
-                                            Now Playing
-                                        </p>
+                            </div>
 
-                                        <div className="mt-1 flex items-center justify-between">
 
-                                            <div>
+                            {/* ================= PLAY ICON ================= */}
 
-                                                <p className="text-sm font-medium text-[#F1EEE8]">
-                                                    {songs[currentSong].title}
-                                                </p>
+                            <span
+                                className={`
+                                    flex
+                                    h-7
+                                    w-7
+                                    shrink-0
+                                    items-center
+                                    justify-center
+                                    rounded-full
+                                    text-xs
+                                    ${
+                                        currentSong === index && isPlaying
+                                            ? "text-[#A94738]"
+                                            : "text-[#77716A]"
+                                    }
+                                `}
+                            >
 
-                                                <p className="text-xs text-[#8E8982]">
-                                                    {songs[currentSong].artist}
-                                                </p>
+                                {currentSong === index && isPlaying
+                                    ? "Ⅱ"
+                                    : "▶"
+                                }
 
-                                            </div>
+                            </span>
 
-                                            <span
-                                                className={
-                                                    isPlaying
-                                                        ? "animate-spin text-xl text-[#A94738]"
-                                                        : "text-xl text-[#F1EEE8]"
-                                                }
-                                            >
-                                                ♪
-                                            </span>
+                        </button>
 
-                                        </div>
+                    ))}
 
-                                    </div>
+                </div>
 
-                                    {/* Controls */}
+            </div>
 
-                                    <div className="flex items-center justify-center gap-5 px-4 py-4">
+        </div>
 
-                                        <button
-                                            onClick={previousSong}
-                                            className="text-[#B8B2AA] transition hover:text-[#F1EEE8]"
-                                        >
-                                            ⏮
-                                        </button>
+    )}
 
-                                        <button
-                                            onClick={togglePlay}
-                                            className="
-                                                flex
-                                                h-11
-                                                w-11
-                                                items-center
-                                                justify-center
-                                                rounded-full
-                                                bg-[#F1EEE8]
-                                                text-[#0D0D0D]
-                                                transition
-                                                hover:bg-[#A94738]
-                                                hover:text-white
-                                            "
-                                        >
-                                            {isPlaying ? "Ⅱ" : "▶"}
-                                        </button>
+</li>
 
-                                        <button
-                                            onClick={nextSong}
-                                            className="text-[#B8B2AA] transition hover:text-[#F1EEE8]"
-                                        >
-                                            ⏭
-                                        </button>
 
-                                    </div>
 
-                                    {/* Playlist */}
 
-                                    <div className="border-t border-[#403A34]">
-
-                                        {songs.map((song, index) => (
-                                            <button
-                                                key={index}
-                                                onClick={() => changeSong(index)}
-                                                className={`
-                                                    flex
-                                                    w-full
-                                                    items-center
-                                                    gap-3
-                                                    px-4
-                                                    py-3
-                                                    text-left
-                                                    transition
-                                                    ${
-                                                        currentSong === index
-                                                            ? "bg-[#2B2723] text-[#F1EEE8]"
-                                                            : "text-[#8E8982] hover:bg-[#2B2723] hover:text-[#F1EEE8]"
-                                                    }
-                                                `}
-                                            >
-
-                                                <span
-                                                    className={
-                                                        currentSong === index
-                                                            ? "text-[#A94738]"
-                                                            : ""
-                                                    }
-                                                >
-                                                    {currentSong === index &&
-                                                    isPlaying
-                                                        ? "♫"
-                                                        : index + 1}
-                                                </span>
-
-                                                <span className="text-sm">
-                                                    {song.title}
-                                                </span>
-
-                                            </button>
-                                        ))}
-
-                                    </div>
-
-                                </div>
-                            )}
-
-                        </li>
 
                         {/* DIVIDER */}
 

@@ -6,7 +6,7 @@ import Education from './components/Education';
 
 const About = () => {
     return (
-        <div> 
+        <div > 
             <section><AboutBanner></AboutBanner></section>
             
              <div className="mx-auto w-full max-w-[1040px] border-t-1 border-dashed border-gray-300" /> 

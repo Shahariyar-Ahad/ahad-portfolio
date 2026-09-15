@@ -54,29 +54,29 @@ const AboutBanner = () => {
 
                         <div className="my-6 border-y border-[#25211D] py-3">
                             <p className="dm-serif-display text-center text-lg italic text-white lg:text-left">
-                                Junior Frontend Web Developer • Bangladesh
+                                Full stack  Web Developer • Bangladesh
                             </p>
                         </div>
 
-                        <p className="dm-serif-display text-[18px] leading-[1.7] text-white md:text-[20px]">
-                            I’m{" "}
-                            <span className="font-bold text-[#d72525]">
-                                Shahariyar Ahad
-                            </span>
-                            , a junior frontend web developer from{" "}
-                            <span className="font-bold text-white">
-                                Bangladesh
-                            </span>{" "}
-                            focused on building clean, responsive, and
-                            user-friendly websites.
-                        </p>
+                        
+<p className="dm-serif-display text-[18px] leading-[1.7] text-white md:text-[20px]">
+    Hello, I’m{" "}
+    <span className="font-bold text-[#d72525]">
+        Shahariyar Ahad
+    </span>
+    , a Full-Stack MERN Developer currently based in{" "}
+    <span className="font-bold text-white">
+        Dhaka, Bangladesh
+    </span>
+    .
+</p>
+
+
 
                         <p className="dm-serif-display mt-5 text-[18px] leading-[1.7] text-white md:text-[20px]">
-                            I enjoy turning ideas and designs into functional
-                            web experiences using modern frontend
-                            technologies. Beyond technology, I have an
+                            I have worked on different web projects where I focused on both frontend development and backend functionality, including APIs, databases, authentication, and application logic. Beyond technology, I have an
                             interest in international politics, economics,
-                            and global trade.
+                            and global trade,war, movies and series.
                         </p>
 
                         {/* Bottom Newspaper Line */}
