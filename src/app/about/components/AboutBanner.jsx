@@ -22,12 +22,12 @@ const AboutBanner = () => {
                     <div className="flex justify-center">
                         <div className="rounded-4xl border border-[#25211D] p-2">
                             <Image
-                                src="/assets/news420.png"
+                                src="/assets/jacket.png"
                                 alt="Shahariyar Ahad"
                                 width={500}
                                 height={500}
                                 priority
-                                className="h-[280px] w-[280px] rounded-4xl object-cover md:h-[340px] md:w-[340px] lg:h-[360px] lg:w-[360px]"
+                                className="h-auto w-full max-w-[380px] object-contain md:h-[340px] md:w-[340px] lg:h-[360px] lg:w-[360px]"
                             />
                         </div>
                     </div>
